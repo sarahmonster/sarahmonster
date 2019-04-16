@@ -10,6 +10,10 @@ tags:
 
 ## Mendaci pinu ipsi nunc
 
+<h2 size="xxlarge">I am a bigger heading, no?</h2>
+
+Important question: do I convert dumb quote's into smart's quotes? "Hello," she said.
+
 Lorem markdownum supplex. Care ferre nos praemia detestatur oderit vitatumque,
 tardius pello ostentare; dixit. [Agit](http://accessit.net/) super, cum, qua
 quae pinxit certamine occulte causa: est est non. Dubita fictumque imagine.
