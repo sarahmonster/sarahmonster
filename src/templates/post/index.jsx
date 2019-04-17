@@ -4,13 +4,13 @@ import { graphql } from "gatsby";
 import rehypeReact from "rehype-react"
 import { Heading, Paragraph } from 'nautilus-system/src';
 
-import Layout from "../layout";
-import UserInfo from "../components/UserInfo/UserInfo";
-import PostTags from "../components/PostTags/PostTags";
-import SEO from "../components/SEO/SEO";
-import config from "../../data/SiteConfig";
-import "./b16-tomorrow-dark.css";
-import "./post.css";
+import Layout from "../../layout";
+import UserInfo from "../../components/user-info";
+import PostTags from "../../components/post-tags";
+import SEO from "../../components/SEO";
+import config from "../../../data/site-config";
+
+import "./b16-tomorrow-dark/index.css";
 
 const renderAst = new rehypeReact({
   createElement: React.createElement,
