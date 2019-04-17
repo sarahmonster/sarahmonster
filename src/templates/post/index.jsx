@@ -7,6 +7,7 @@ import { Heading, Paragraph } from 'nautilus-system/src';
 import Layout from "../../layout";
 import UserInfo from "../../components/user-info";
 import PostTags from "../../components/post-tags";
+import PostDate from "../../components/post-date";
 import SEO from "../../components/SEO";
 import config from "../../../data/site-config";
 
@@ -42,6 +43,7 @@ export default class PostTemplate extends React.Component {
           </Helmet>
           <SEO postPath={slug} postNode={postNode} postSEO />
 
+            <PostDate date={ post.date } />
             <Heading level={1} size="xxlarge">{post.title}</Heading>
 
             { renderAst(postNode.htmlAst) }
