@@ -11,8 +11,6 @@ import PostDate from "../../components/post-date";
 import SEO from "../../components/SEO";
 import config from "../../../data/site-config";
 
-import "./b16-tomorrow-dark/index.css";
-
 const renderAst = new rehypeReact({
   createElement: React.createElement,
   components: {
@@ -24,7 +22,7 @@ const renderAst = new rehypeReact({
 }).Compiler
 
 
-export default class PostTemplate extends React.Component {
+export default class TalkTemplate extends React.Component {
   render() {
     const { slug } = this.props.pageContext;
     const postNode = this.props.data.markdownRemark;
@@ -43,7 +41,6 @@ export default class PostTemplate extends React.Component {
           </Helmet>
           <SEO postPath={slug} postNode={postNode} postSEO />
 
-            <PostDate date={ post.date } />
             <Heading level={1} size="xxlarge">{post.title}</Heading>
 
             { renderAst(postNode.htmlAst) }
@@ -57,7 +54,7 @@ export default class PostTemplate extends React.Component {
 
 /* eslint no-undef: "off" */
 export const pageQuery = graphql`
-  query BlogPostBySlug($slug: String!) {
+  query TalkBySlug($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       htmlAst
       timeToRead
@@ -70,7 +67,6 @@ export const pageQuery = graphql`
         tags
       }
       fields {
-
         slug
         date
       }

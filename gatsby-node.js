@@ -98,14 +98,19 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
 
   return new Promise((resolve, reject) => {
+    const talkPage = path.resolve("src/templates/talk/index.jsx");
     const postPage = path.resolve("src/templates/post/index.jsx");
     const tagPage = path.resolve("src/templates/tag/index.jsx");
     const categoryPage = path.resolve("src/templates/category/index.jsx");
+    
+    // Create pages for all posts
     resolve(
       graphql(
         `
           {
-            allMarkdownRemark {
+            allMarkdownRemark (
+              filter: { fileAbsolutePath: {regex : "\/posts/"} },
+              ) {
               edges {
                 node {
                   frontmatter {
@@ -141,7 +146,7 @@ exports.createPages = ({ graphql, actions }) => {
           }
 
           createPage({
-            path: edge.node.fields.slug,
+            path: `${edge.node.fields.slug}/`,
             component: postPage,
             context: {
               slug: edge.node.fields.slug
@@ -170,6 +175,68 @@ exports.createPages = ({ graphql, actions }) => {
             }
           });
         });
+      })
+    );
+
+
+    // Create pages for all talks
+    resolve(
+      graphql(
+        `
+          {
+            allMarkdownRemark (
+              filter: { fileAbsolutePath: {regex : "\/talks/"} },
+              ) {
+              edges {
+                node {
+                  frontmatter {
+                    tags
+                    category
+                  }
+                  fields {
+                    slug
+                  }
+                }
+              }
+            }
+          }
+        `
+      ).then(result => {
+        if (result.errors) {
+          /* eslint no-console: "off" */
+          console.log(result.errors);
+          reject(result.errors);
+        }
+
+        const tagSet = new Set();
+
+        result.data.allMarkdownRemark.edges.forEach(edge => {
+          if (edge.node.frontmatter.tags) {
+            edge.node.frontmatter.tags.forEach(tag => {
+              tagSet.add(tag);
+            });
+          }
+
+          createPage({
+            path: `${edge.node.fields.slug}/`,
+            component: talkPage,
+            context: {
+              slug: edge.node.fields.slug
+            }
+          });
+        });
+
+        const tagList = Array.from(tagSet);
+        tagList.forEach(tag => {
+          createPage({
+            path: `/tags/${_.kebabCase(tag)}/`,
+            component: tagPage,
+            context: {
+              tag
+            }
+          });
+        });
+        
       })
     );
   });

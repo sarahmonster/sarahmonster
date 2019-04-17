@@ -25,10 +25,11 @@ export default Index;
 
 /* eslint no-undef: "off" */
 export const pageQuery = graphql`
-  query IndexQuery {
+  query GetAllStories {
     allMarkdownRemark(
+      filter: { fileAbsolutePath: {regex : "\/posts/"} },
       limit: 2000
-      sort: { fields: [fields___date], order: DESC }
+      sort: { fields: [frontmatter___date], order: DESC }
     ) {
       edges {
         node {
