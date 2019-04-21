@@ -1,0 +1,39 @@
+[
+  {
+    "title": "WordCamp London",
+    "date": "2019-04-06",
+    "url": "https://example.com",
+    "city": "London",
+    "countryCode": "GB"
+  },
+  {
+    "title": "WordCamp Nordic",
+    "date": "2018-03-08",
+    "url": "https://example.com",
+    "city": "Helsinki",
+    "countryCode": "FI"
+  },
+  {
+    "title": "CMS Africa",
+    "date": "2017-03-01",
+    "url": "https://example.com",
+    "city": "Abuja",
+    "countryCode": "NG"
+  },
+  {
+    "title": "CMS Africa",
+    "date": "2018-03-01",
+    "url": "https://example.com",
+    "city": "Kigali",
+    "countryCode": "RW"
+  },
+  {
+    "title": "FrontEndNorth",
+    "date": "2018-01-01",
+    "url": "",
+    "city": "Sheffield",
+    "countryCode": "GB"
+  }
+
+
+]

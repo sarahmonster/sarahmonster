@@ -20,9 +20,10 @@ class Index extends React.Component {
         <SEO />
 
         <Heading size="xxlarge" level={1}>Speaking</Heading>
-        <Heading size="medium" level={0}>Sometimes I do it.</Heading>
 
         <Paragraph>No lie, I'm sometimes terrified of public speaking. But I think it's good to do things that terrify you, and I like sharing my ideas, so I do it...pretty frequently.</Paragraph>
+
+        <Paragraph>If you'd like me to come and speak at your event, here are a few things I like to talk about: [thing, thing1, thing2], and some things I've talked about in the past.</Paragraph>
 
         <Heading size="large" level={2}>Speaking engagements</Heading>
         <SpeakingEngagementList postEdges={allEvents} />
@@ -39,7 +40,9 @@ export default Index;
 /* eslint no-undef: "off" */
 export const pageQuery = graphql`
   query getAllTalks {
-    allSpeakingEngagementsJson {
+    allSpeakingEngagementsJson(
+      sort: { fields: [date], order: DESC }
+    ) {
       edges {
         node {
           id
