@@ -44,7 +44,7 @@ export default class PostTemplate extends React.Component {
           <SEO postPath={slug} postNode={postNode} postSEO />
 
             <PostDate date={ post.date } />
-            <Heading level={1} size="xxlarge">{post.title}</Heading>
+            <Heading level={1} size="title">{post.title}</Heading>
 
             { renderAst(postNode.htmlAst) }
 

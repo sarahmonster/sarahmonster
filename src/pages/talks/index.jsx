@@ -19,7 +19,7 @@ class Index extends React.Component {
         <Helmet title={config.siteTitle} />
         <SEO />
 
-        <Heading size="xxlarge" level={1}>Speaking</Heading>
+        <Heading size="title" level={1}>Speaking</Heading>
 
         <Paragraph>No lie, I'm sometimes terrified of public speaking. But I think it's good to do things that terrify you, and I like sharing my ideas, so I do it...pretty frequently.</Paragraph>
 

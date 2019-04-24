@@ -13,7 +13,7 @@ class PostDate extends Component {
     const formattedDate = format(timestamp, 'Do of MMMM YYYY');
 
     return (
-      <Heading level={0} size="xxsmall">
+      <Heading level={0} size="metadataSmall">
         { formattedDate }
       </Heading>
     );

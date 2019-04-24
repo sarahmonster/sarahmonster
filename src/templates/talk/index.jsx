@@ -41,7 +41,7 @@ export default class TalkTemplate extends React.Component {
           </Helmet>
           <SEO postPath={slug} postNode={postNode} postSEO />
 
-            <Heading level={1} size="xxlarge">{post.title}</Heading>
+            <Heading level={1} size="title">{post.title}</Heading>
 
             { renderAst(postNode.htmlAst) }
 
