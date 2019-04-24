@@ -15,25 +15,132 @@
   },
   {
     "title": "CMS Africa",
-    "date": "2017-03-01",
-    "url": "https://example.com",
-    "city": "Abuja",
-    "countryCode": "NG"
-  },
-  {
-    "title": "CMS Africa",
     "date": "2018-03-01",
-    "url": "https://example.com",
+    "url": "http://summit.cmsafrica.org",
     "city": "Kigali",
     "countryCode": "RW"
   },
   {
-    "title": "FrontEndNorth",
-    "date": "2018-01-01",
+    "title": "DotYork",
+    "date": "2017-11-01",
     "url": "",
-    "city": "Sheffield",
+    "city": "York",
     "countryCode": "GB"
+  },
+  {
+    "title": "WordPress London Meetup",
+    "date": "2017-10-01",
+    "url": "",
+    "city": "London",
+    "countryCode": "GB"
+  },
+  {
+    "title": "Frontend Conf",
+    "date": "2017-08-30",
+    "url": "",
+    "city": "Zurich",
+    "countryCode": "CH"
+  },
+  {
+    "title": "WordCamp Europe",
+    "date": "2017-06-17",
+    "url": "https://2017.europe.wordcamp.org/session/night-of-the-living-style-guides/",
+    "city": "Paris",
+    "countryCode": "FR"
+  },
+  {
+    "title": "webinale",
+    "date": "2017-05-31",
+    "url": "https://webinale.de/session/the-unbearable-likeness-of-design/",
+    "city": "Berlin",
+    "countryCode": "DE"
+  },
+  {
+    "title": "WordPress Glasgow",
+    "date": "2017-04-23",
+    "url": "https://www.meetup.com/Glasgow-WordPress-Meetup/events/238924203/",
+    "city": "Glasgow",
+    "countryCode": "GB"
+  },
+  {
+    "title": "Render Conf",
+    "date": "2017-03-31",
+    "url": "",
+    "city": "Oxford",
+    "countryCode": "GB",
+    "video": "https://youtu.be/8hK-JQlK89c"
+  },
+  {
+    "title": "CMS Africa",
+    "date": "2017-03-04",
+    "url": "http://summit.cmsafrica.org",
+    "city": "Abuja",
+    "countryCode": "NG"
+  },
+  {
+    "title": "WordCamp London",
+    "date": "2017-03-19",
+    "url": "https://2017.london.wordcamp.org/session/the-unbearable-likeness-of-design/",
+    "city": "London",
+    "countryCode": "GB",
+    "video": "https://videopress.com/v/BnI4RTPG",
+    "slides": "https://www.slideshare.net/sarahmonster/the-unbearable-likeness-of-web-design-73297669"
+  },
+  {
+    "title": "WordCamp Brighton",
+    "date": "2016-07-23",
+    "url": "https://2016.brighton.wordcamp.org/session/the-unbearable-likeness-of-design/",
+    "city": "Brighton",
+    "countryCode": "GB",
+    "video": "https://videopress.com/v/jdjCAueF",
+    "slides": "http://www.slideshare.net/sarahmonster/the-unbearable-likeness-of-web-design"
+  },
+  {
+    "title": "WordPress Montreal",
+    "date": "2015-11-10",
+    "url": "http://wpmtl.org/blog/2015/11/02/unbearable-likeness-of-design/",
+    "city": "Montreal",
+    "countryCode": "CA"
+  },
+  {
+    "title": "WordPress Glasgow",
+    "date": "2016-10-26",
+    "url": "https://www.meetup.com/Glasgow-WordPress-Meetup/events/233571952/",
+    "city": "Glasgow",
+    "countryCode": "GB",
+    "slides": "http://www.slideshare.net/sarahsemark/how-i-learned-to-stop-using-icon-fonts-and-love-svg-again"
+  },
+  {
+    "title": "DotYork",
+    "date": "2016-06-08",
+    "url": "http://dotyork.com/2016/performance-for-everyone",
+    "city": "York",
+    "countryCode": "GB",
+    "slides": "https://www.slideshare.net/sarahsemark/git-rid-of-your-gantt-charts"
+  }, 
+  {
+    "title": "WordCamp London",
+    "date": "2016-04-09",
+    "url": "https://2016.london.wordcamp.org/session/how-i-learnt-to-stop-using-icon-fonts-and-love-svg/",
+    "city": "London",
+    "countryCode": "GB",
+    "slides": "http://www.slideshare.net/sarahsemark/how-i-learned-to-stop-using-icon-fonts-and-love-svg",
+    "video": "https://videopress.com/v/PW803dPr"
+  },
+  {
+    "title": "WordCamp Montreal",
+    "date": "2014-08-16",
+    "url": "https://2014.montreal.wordcamp.org/session/i-broke-up-with-photoshop-and-you-can-too/",
+    "city": "Montreal",
+    "countryCode": "CA",
+    "video": "https://videopress.com/v/GMKXUvEF"
+  },
+  {
+    "title": "WordCamp Montreal",
+    "date": "2013-06-29",
+    "url": "https://2013.montreal.wordcamp.org/session/build-a-website-on-the-moon-wordpress-development-from-anywhere/",
+    "city": "Montreal",
+    "countryCode": "CA",
+    "video": "https://videopress.com/v/PR18d8M9"
   }
-
-
 ]

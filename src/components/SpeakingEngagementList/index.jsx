@@ -10,6 +10,7 @@ class SpeakingEngagementList extends React.Component {
     const { postEdges } = this.props;
     postEdges.forEach(postEdge => {
       postList.push({
+        id: postEdge.node.id,
         path: postEdge.node.url,
         title: postEdge.node.title,
         date: this.outputDate(postEdge),
@@ -49,11 +50,12 @@ class SpeakingEngagementList extends React.Component {
 
   render() {
     const postList = this.getPostList();
+    console.log(countryFlagEmoji.data);
     return (
       <React.Fragment>
         {/* Your post list here. */
         postList.map(post => (
-          <Card key={post.date} title={post.title} metadata={post.metadata} link={post.path} />
+          <Card key={post.id} title={post.title} metadata={post.metadata} link={post.path} />
         ))}
       </React.Fragment>
     );
