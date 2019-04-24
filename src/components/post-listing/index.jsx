@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
+import { Heading } from 'nautilus-system/src';
 
 class PostListing extends React.Component {
   getPostList() {
@@ -24,7 +25,7 @@ class PostListing extends React.Component {
         {/* Your post list here. */
         postList.map(post => (
           <Link to={post.path} key={post.title}>
-            <h1>{post.title}</h1>
+            <Heading size="medium" level={2}>{post.title}</Heading>
           </Link>
         ))}
       </div>
