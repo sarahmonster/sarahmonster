@@ -1,11 +1,12 @@
 import React from "react";
 import { Link } from "gatsby";
-import { Heading } from 'nautilus-system/src';
+import { Card, Paragraph } from 'nautilus-system/src';
 
 class PostListing extends React.Component {
   getPostList() {
     const postList = [];
-    this.props.postEdges.forEach(postEdge => {
+    const { postEdges } = this.props;
+    postEdges.forEach(postEdge => {
       postList.push({
         path: postEdge.node.fields.slug,
         tags: postEdge.node.frontmatter.tags,
@@ -18,15 +19,17 @@ class PostListing extends React.Component {
     });
     return postList;
   }
+
   render() {
     const postList = this.getPostList();
     return (
       <div>
         {/* Your post list here. */
         postList.map(post => (
-          <Link to={post.path} key={post.title}>
-            <Heading size="medium" level={2}>{post.title}</Heading>
-          </Link>
+          <Card key={post.title} title={post.title} metadata={post.tags} media={post.cover}>
+            <Paragraph noMargin size="small">{post.excerpt}</Paragraph>
+            <Link to={post.path}>Read more</Link>
+          </Card>
         ))}
       </div>
     );

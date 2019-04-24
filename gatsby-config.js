@@ -20,6 +20,14 @@ module.exports = {
   plugins: [
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-lodash",
+    "gatsby-transformer-json",
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "events",
+        path: `${__dirname}/data`,
+      },
+    },
     {
       resolve: "gatsby-source-filesystem",
       options: {

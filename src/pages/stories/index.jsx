@@ -1,6 +1,7 @@
 import React from "react";
 import Helmet from "react-helmet";
 import { graphql } from "gatsby";
+
 import Layout from "../../layout";
 import PostListing from "../../components/post-listing";
 import SEO from "../../components/SEO";
@@ -25,10 +26,11 @@ export default Index;
 
 /* eslint no-undef: "off" */
 export const pageQuery = graphql`
-  query IndexQuery {
+  query GetAllStories {
     allMarkdownRemark(
+      filter: { fileAbsolutePath: {regex : "\/posts/"} },
       limit: 2000
-      sort: { fields: [fields___date], order: DESC }
+      sort: { fields: [frontmatter___date], order: DESC }
     ) {
       edges {
         node {

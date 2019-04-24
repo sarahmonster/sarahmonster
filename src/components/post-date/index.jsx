@@ -8,12 +8,12 @@ class PostDate extends Component {
   render() {
 
     // Format the date
-    const date = this.props.date;
+    const { date } = this.props;
     const timestamp = new Date(date);
     const formattedDate = format(timestamp, 'Do of MMMM YYYY');
 
     return (
-      <Heading level={0} size="xxsmall">
+      <Heading level={0} size="metadataSmall">
         { formattedDate }
       </Heading>
     );
